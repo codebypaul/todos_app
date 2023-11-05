@@ -23,4 +23,5 @@ class TaskDetail(DetailView):
 class TaskCreate(CreateView):
     model = Task
     fields = '__all__'
-    success_url = reverse_lazy('tasks')
+    success_url = reverse_lazy('task list')
+    # form_class = 'task_form'
