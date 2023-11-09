@@ -45,7 +45,7 @@ class RegisterPage(FormView):
 #     return render(request, 'auth/signup.html', context = {} ,status = 200)
 
 # Authenticated user views  
-def profile(request):
+def profile(LoginRequiredMixin,request):
     print(request.user)
     return render(request,'profile.html',context = {}, status = 200)
 
